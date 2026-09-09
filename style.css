@@ -1,0 +1,380 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 45px 20px;
+
+    background:
+        radial-gradient(circle at top left, #6366f1 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #06b6d4 0%, transparent 35%),
+        linear-gradient(135deg, #0f172a, #1e1b4b);
+
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Profile Circle */
+
+.profile-icon {
+    width: 105px;
+    height: 105px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6,
+        #ec4899
+    );
+
+    border: 4px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.6),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+
+/* Name */
+
+.profile h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Description */
+
+.profile p {
+    color: #cbd5e1;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* Link Card */
+
+.link-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 0 22px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Shining effect */
+
+.link-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+
+    transition: 0.5s;
+}
+
+
+/* Hover */
+
+.link-card:hover {
+    transform: translateY(-4px) scale(1.015);
+
+    background: rgba(255, 255, 255, 0.17);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.link-card:hover::before {
+    left: 100%;
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.link-card i {
+    width: 42px;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 15px;
+}
+
+
+/* =========================
+   PLATFORM ICON COLORS
+========================= */
+
+
+/* Email */
+
+.link-card:nth-child(1) i {
+    color: #f87171;
+}
+
+
+/* LinkedIn */
+
+.link-card:nth-child(2) i {
+    color: #38bdf8;
+}
+
+
+/* GitHub */
+
+.link-card:nth-child(3) i {
+    color: #f8fafc;
+}
+
+
+/* WhatsApp */
+
+.link-card:nth-child(4) i {
+    color: #22c55e;
+}
+
+
+/* LeetCode */
+
+.link-card:nth-child(5) i {
+    color: #facc15;
+}
+
+
+/* Stack Overflow */
+
+.link-card:nth-child(6) i {
+    color: #f97316;
+}
+
+
+/* Facebook */
+
+.link-card:nth-child(7) i {
+    color: #60a5fa;
+}
+
+
+/* Instagram */
+
+.link-card:nth-child(8) i {
+    color: #f472b6;
+}
+
+
+/* YouTube */
+
+.link-card:nth-child(9) i {
+    color: #ef4444;
+}
+
+
+/* Discord */
+
+.link-card:nth-child(10) i {
+    color: #818cf8;
+}
+
+
+/* X / Twitter */
+
+.link-card:nth-child(11) i {
+    color: #f8fafc;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.link-card span {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    .profile-icon {
+        width: 90px;
+        height: 90px;
+
+        font-size: 35px;
+    }
+
+    .profile h1 {
+        font-size: 27px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+
+    .link-card {
+        min-height: 60px;
+
+        padding: 0 18px;
+    }
+
+    .link-card i {
+        font-size: 22px;
+
+        width: 38px;
+
+        margin-right: 12px;
+    }
+
+    .link-card span {
+        font-size: 16px;
+    }
+}
